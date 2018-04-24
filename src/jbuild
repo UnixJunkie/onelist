@@ -3,7 +3,7 @@
 (library
  ((name        nelist)
   (public_name nelist)
-  (modules (List))))
+  (modules (Nelist))))
 
 (executable
   ((name test)
