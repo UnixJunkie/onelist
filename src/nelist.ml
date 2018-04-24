@@ -59,8 +59,15 @@ let of_std_list = function
   | l ->
     let l' = List.rev l in
     match l' with
-    | [] -> assert(false)
-    | _ -> fold_left cons l'
+    | [] -> assert(false) (* forbidden *)
+    | x :: xs -> List.fold_left (fun acc y -> cons y acc) (One x) xs
+
+let to_std_list l =
+  let rec loop acc = function
+    | One x -> x :: acc
+    | More (x, xs) -> loop (x :: acc) xs
+  in
+  List.rev (loop [] l)
 
 (* val rev 'a list -> 'a list *)
 let rev l =
@@ -71,9 +78,6 @@ let rev l =
   match l with
   | One x -> One x
   | More (x, xs) -> loop (One x) xs
-
-    
-  
 
 (* val init int -> (int -> 'a) -> 'a list *)
 let init len f =
