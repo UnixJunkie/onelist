@@ -1,10 +1,10 @@
 opam-version: "1.2"
-name: "nelist"
+name: "onelist"
 authors: "Francois BERENGER <ligand@free.fr>"
 maintainer: "Francois BERENGER <ligand@free.fr>"
-homepage: "https://github.com/UnixJunkie/nelist"
-bug-reports: "https://github.com/UnixJunkie/nelist/issues"
-dev-repo: "https://github.com/UnixJunkie/nelist.git"
+homepage: "https://github.com/UnixJunkie/onelist"
+bug-reports: "https://github.com/UnixJunkie/onelist/issues"
+dev-repo: "https://github.com/UnixJunkie/onelist.git"
 license: "LGPL"
 build: ["jbuilder" "build" "-p" name "-j" jobs]
 depends: [
