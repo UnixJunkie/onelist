@@ -107,6 +107,9 @@ let rec fold_left f init l =
   in
   loop init l
 
+(** alias for fold_left *)
+let fold = fold_left
+
 (* val concat 'a list list -> 'a list *)
 let concat l =
   let l' = rev l in
