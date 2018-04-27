@@ -55,14 +55,14 @@ let nth_opt l i =
   with _ -> None
 
 let of_std_list l =
-  match List.rev l with
+  match ListLabels.rev l with
   | [] -> assert(false) (* forbidden *)
   | x :: xs ->
-    List.fold_left (fun acc x -> cons x acc) (One x) xs
+    ListLabels.fold_left ~f:(fun acc x -> cons x acc) ~init:(One x) xs
 
 let to_std_list l =
   let rec loop acc = function
-    | One x -> List.rev (x :: acc)
+    | One x -> ListLabels.rev (x :: acc)
     | More (x, xs) -> loop (x :: acc) xs
   in
   loop [] l
