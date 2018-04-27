@@ -1,11 +1,11 @@
 (jbuild_version 1)
 
 (library
- ((name        nelist)
-  (public_name nelist)
-  (modules (Nelist))))
+ ((name        onelist)
+  (public_name onelist)
+  (modules (list))))
 
 (executable
   ((name test)
    (modules (test))
-   (libraries (nelist))))
+   (libraries (onelist))))
